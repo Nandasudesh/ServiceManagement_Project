@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.qa.servicemanagementproject.Listeners" />
+	</listeners>
+	<test thread-count="5" name="Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<!--<class name="com.qa.testscripts.SendSMSTest"></class>-->
+			<class name="com.qa.testscripts.AddClientTest"></class>
+			<!--<class name="com.qa.testscripts.HomePageTest"></class>-->
+			<!--<class name="com.qa.testscripts.LoginTest"/>-->
+			<!--<class name="com.qa.testscripts.QuantityAlertTest"></class>-->
+			<!--<class name="com.qa.testscripts.SendEmailTest"></class>-->
+			<!--<class name="com.qa.testscripts.LogoutTest"></class>-->
+			<!--<class name="com.qa.testscripts.OredrAndReparationPageTest"></class>-->
+			<!--<class name="com.qa.testscripts.QuickSMSTest"></class>-->
+			<!--<class name="com.qa.testscripts.ForgotYourPwTest"></class>-->
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
