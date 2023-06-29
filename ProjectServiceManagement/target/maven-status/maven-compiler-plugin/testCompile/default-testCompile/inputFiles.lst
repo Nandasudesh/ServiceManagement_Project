@@ -9,6 +9,7 @@ C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\j
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\testscripts\ReparationTest.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\pages\SendSMSPage.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\testscripts\SendSMSTest.java
+C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\testscripts\InventoryPageTest.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\servicemanagementproject\Listeners.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\pages\AddClientPage.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\pages\QuantityAlertPage.java
@@ -20,6 +21,7 @@ C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\j
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\pages\HomePage.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\testscripts\SendEmailTest.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\pages\SendEmailPage.java
+C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\pages\InventoryPage.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\testscripts\AddClientTest.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\pages\LogoutPage.java
 C:\Users\nanda\git\ServiceManagement_Project\ProjectServiceManagement\src\test\java\com\qa\testscripts\QuantityAlertTest.java

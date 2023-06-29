@@ -83,5 +83,14 @@ public class PageUtility {
 	public String getTitile(WebDriver driver) {
 		return driver.getTitle();
 	}
+	
+	public static void selectElementFromListUsingGetAttribute(List<WebElement> element, String attri, String value) {
+		for(WebElement i: element) {
+			String attribute=i.getAttribute(attri);
+			if(attribute.contentEquals(value)) {
+				i.click();
+			}
+		}
+	}
 
 }
