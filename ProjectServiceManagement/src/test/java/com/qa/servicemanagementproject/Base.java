@@ -8,7 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -23,6 +25,9 @@ public class Base {
 	public FileInputStream fs1, fs2;
 	public ScreenshotUtility screenShot1;
 	ChromeOptions ops = new ChromeOptions();
+	EdgeOptions options=new EdgeOptions();
+	FirefoxOptions opt=new FirefoxOptions();
+	
 
 	@BeforeMethod(alwaysRun = true)
 	@Parameters("browser")
@@ -54,15 +59,17 @@ public class Base {
 		}
 
 		if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", ".\\geckodriver.exe");
-			driver = new FirefoxDriver();
+			opt.addArguments("--remote-allow-origins=*");
+			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + constants.Constant.FIREFOX );//".\\geckodriver.exe"
+			driver = new FirefoxDriver(opt);
 		} else if (browser.equalsIgnoreCase("chrome")) {
 			ops.addArguments("--remote-allow-origins=*");//?
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + constants.Constant.CHROME);
 			driver = (WebDriver) new ChromeDriver(ops);
 		} else if (browser.equalsIgnoreCase("Edge")) {
+			options.addArguments("--remote-allow-origins=*");
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + constants.Constant.EDGE);
-			driver = new EdgeDriver();
+			driver = new EdgeDriver(options);
 		} else {
 			throw new Exception("Browser is not correct");
 		}

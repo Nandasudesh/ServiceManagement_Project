@@ -10,9 +10,10 @@ import com.qa.pages.HomePage;
 import com.qa.pages.LoginPage;
 import com.qa.servicemanagementproject.Base;
 import com.qa.utilities.ExcelUtility;
+import com.qa.utilities.PageUtility;
 
 public class AddClientTest extends Base{
-	
+	PageUtility page=new PageUtility();
 	LoginPage loginpage;
 	HomePage homepage;
 	AddClientPage addclientpage;
@@ -43,6 +44,7 @@ public class AddClientTest extends Base{
 		
 		
 	}
+
 	@Test
 	public void verifyAlertMsgWithoutClient() throws IOException {
 		loginpage=new LoginPage(driver);

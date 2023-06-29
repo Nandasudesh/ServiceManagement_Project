@@ -7,5 +7,6 @@ public class Constant {
     public static final String TESTDATAFILE="\\src\\main\\java\\Resources\\testdata.xlsx";
     public static final String CHROME="\\src\\main\\java\\Resources\\chromedriver.exe";
     public static final String EDGE="\\src\\main\\java\\Resources\\msedgedriver.exe";
+    public static final String FIREFOX="\\src\\main\\java\\Resources\\geckodriver.exe";
 
 }

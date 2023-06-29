@@ -62,7 +62,7 @@ public class AddClientPage {
 	@FindBy(xpath="//li[text()='This value is required.']")
 	WebElement alertMsgWithoutClient;
 	
-	
+
 	public void addClientName() {
 		String name=FakerUtility.clientName();
 		page.setValue(cname, name);
@@ -139,7 +139,7 @@ public class AddClientPage {
 	
 //	public void verifyIfClientAdded() {
 //		page.clickOnElement(searchClient);
-//		page.setValue(searchClient, name);
+//		page.setValue(searchClient, email);
 //		boolean isClientAdded=driver.findElements(By.xpath("//table//tbody//tr//td[contains(text().'"+name+"')]")).size()>0;
 //		Assert.assertTrue(isClientAdded, "client addittion failed");
 //	}
