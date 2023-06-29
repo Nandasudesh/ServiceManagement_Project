@@ -25,9 +25,8 @@ public class Base {
 	public FileInputStream fs1, fs2;
 	public ScreenshotUtility screenShot1;
 	ChromeOptions ops = new ChromeOptions();
-	EdgeOptions options=new EdgeOptions();
-	FirefoxOptions opt=new FirefoxOptions();
-	
+	EdgeOptions options = new EdgeOptions();
+	FirefoxOptions opt = new FirefoxOptions();
 
 	@BeforeMethod(alwaysRun = true)
 	@Parameters("browser")
@@ -42,7 +41,7 @@ public class Base {
 		}
 		// loading config.properties
 		try {
-			prop1.load(fs1);//loads data from reader obj
+			prop1.load(fs1);// loads data from reader obj
 		} catch (Exception e) {
 
 		}
@@ -60,10 +59,10 @@ public class Base {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			opt.addArguments("--remote-allow-origins=*");
-			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + constants.Constant.FIREFOX );//".\\geckodriver.exe"
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + constants.Constant.FIREFOX);// ".\\geckodriver.exe"
 			driver = new FirefoxDriver(opt);
 		} else if (browser.equalsIgnoreCase("chrome")) {
-			ops.addArguments("--remote-allow-origins=*");//?
+			ops.addArguments("--remote-allow-origins=*");// ?
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + constants.Constant.CHROME);
 			driver = (WebDriver) new ChromeDriver(ops);
 		} else if (browser.equalsIgnoreCase("Edge")) {
@@ -75,8 +74,9 @@ public class Base {
 		}
 		driver.get(prop1.getProperty("url"));
 	}
+
 //ITestResult is a testNG listener. listeners are testng annotations, based on instructions, it will do accordingly. used for report generating
-	//enhancing reports
+	// enhancing reports
 	@AfterMethod
 	public void browserQuit(ITestResult iTestResult) throws IOException {
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
