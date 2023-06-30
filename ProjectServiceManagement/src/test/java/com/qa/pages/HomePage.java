@@ -56,6 +56,20 @@ public class HomePage {
 	WebElement quickSMS;
 	@FindBy(xpath="//label[text()='IMEI']")
 	WebElement labelIMEI;
+	
+	public void clickOnAddIcon() {
+		page.clickOnElement(addIcon);
+	}
+	
+	public void clickOnAddClient() {
+		page.clickOnElement(addClient);
+	}
+	
+	public void getActualMessage() {
+		WaitUtility.waitForElement(driver, message);
+		String actualMessage = page.getElementText(message);
+	}
+	
 
 	public void verifyNavigateClientPage() throws IOException {
 		page.clickOnElement(addIcon);
@@ -75,10 +89,16 @@ public class HomePage {
 		page.clickOnElement(addReparation);
 	}
 	
-	public String getReparationPageMessage() throws InterruptedException {
-		
+//	public String getReparationPageMessage() throws InterruptedException {
+//		
+//		WaitUtility.waitForElement(driver, labelIMEI);
+//		return page.getElementText(labelIMEI);
+//	}
+	
+	public Boolean isIMEILabelPresent() {
 		WaitUtility.waitForElement(driver, labelIMEI);
-		return page.getElementText(labelIMEI);
+		return labelIMEI.isDisplayed();
+		
 	}
 
 
