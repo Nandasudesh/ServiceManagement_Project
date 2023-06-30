@@ -17,7 +17,7 @@ public class HomePageTest extends Base {
 	LoginPage loginpage;
 
 	@Test(groups = "Sanity")
-	public void addClient() throws IOException {
+	public void verifyAddClientNavigation() throws IOException {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
@@ -28,6 +28,8 @@ public class HomePageTest extends Base {
 		homepage.navigateToAddClientPage();
 		String expectedMessage=ExcelUtility.getString(1, 4,
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
+		String actualMessage=homepage.getActualMessageforAddClient();
+		Assert.assertEquals(actualMessage, expectedMessage, "Failed navigation to add client");
 
 	}
 

@@ -57,31 +57,16 @@ public class HomePage {
 	@FindBy(xpath="//label[text()='IMEI']")
 	WebElement labelIMEI;
 	
-	public void clickOnAddIcon() {
+	public void navigateToAddClientPage() {
 		page.clickOnElement(addIcon);
-	}
-	
-	public void clickOnAddClient() {
 		page.clickOnElement(addClient);
 	}
+
 	
-	public void getActualMessage() {
+	public String getActualMessageforAddClient() {
 		WaitUtility.waitForElement(driver, message);
 		String actualMessage = page.getElementText(message);
-	}
-	
-
-	public void verifyNavigateClientPage() throws IOException {
-		page.clickOnElement(addIcon);
-		WaitUtility.waitForElementLocated(driver, By.xpath("//i[@class='fa fa-plus-circle']"));
-		page.clickOnElement(addClient);
-		String expectedMessage = ExcelUtility.getString(1, 4,
-				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
-		WaitUtility.waitForElement(driver, message);
-		String actualMessage = page.getElementText(message);
-
-		Assert.assertEquals(actualMessage, expectedMessage, "Failed test");
-
+		return actualMessage;
 	}
 	
 	public void navigateToReparartionPage() {
