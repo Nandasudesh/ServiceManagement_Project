@@ -16,8 +16,9 @@
 			<!--<class name="com.qa.testscripts.LogoutTest"></class>-->
 			<!--<class name="com.qa.testscripts.OredrAndReparationPageTest"></class>-->
 			<!--<class name="com.qa.testscripts.QuickSMSTest"></class>-->
-			<class name="com.qa.testscripts.ForgotYourPwTest"></class>
+			<!--<class name="com.qa.testscripts.ForgotYourPwTest"></class>-->
 			<!--<class name="com.qa.testscripts.InventoryPageTest"></class>-->
+			<class name="com.qa.testscripts.ReparationTest"></class>
 		</classes>
 	</test> <!--
 	Test -->

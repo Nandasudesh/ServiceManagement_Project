@@ -1,5 +1,7 @@
 package com.qa.pages;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.qa.utilities.FakerUtility;
 import com.qa.utilities.PageUtility;
+import com.qa.utilities.WaitUtility;
 
 public class ReparationPage {
 	public WebDriver driver;
@@ -62,10 +65,16 @@ public class ReparationPage {
 	WebElement statusDropDown;
 	@FindBy(xpath="//input[@class='select2-search__field']")
 	WebElement statusTextBox;
+	@FindBy(xpath="//div[@class='btn btn-primary btn-file']")
+	WebElement browse;
 	@FindBy(xpath="//button[@id='upload_modal_btn']")
 	WebElement uploadButton;
 	@FindBy(xpath="//input[@class='file-caption-name']")
 	WebElement selectFile;
+	@FindBy(xpath="//span[text()='Upload']")
+	WebElement uploadFinal;
+	@FindBy(xpath="(//div[@class='progress'])[3]")
+	WebElement uploadCompleteMessage;
 	@FindBy(xpath="(//button[@class='close'])[4]")
 	WebElement closeUpload;
 	@FindBy(xpath="//input[@id='repair_sms']")
@@ -80,10 +89,18 @@ public class ReparationPage {
 	WebElement addReparation;
 	
 	
+	public void uploadImage() throws AWTException, InterruptedException {
+		WaitUtility.waitForElement(driver, uploadButton);
+		page.clickOnElement(uploadButton);
+		WaitUtility.waitForelementClickable(driver, browse);
+		page.fileUpload(driver, browse, "\"C:\\Users\\nanda\\Pictures\\Screenshots\\Screenshot 2023-03-04 191015.png\"");
+		//WaitUtility.waitForElement(driver, uploadFinal);
+		page.clickOnElement(uploadFinal);
+		String message=page.getElementText(uploadCompleteMessage);
+		System.out.println(message);
 	
-	public void addReparation() {
-		
 	}
+
 	
 
 }
