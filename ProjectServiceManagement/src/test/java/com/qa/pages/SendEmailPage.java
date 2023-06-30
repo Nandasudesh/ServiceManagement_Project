@@ -20,6 +20,8 @@ public class SendEmailPage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath="//select[@name='email_to[]']")
+	WebElement selectBox;
 	@FindBy(xpath="(//input[@name='subject'])[2]")
 	WebElement subjectTextBox;
 	@FindBy(id="sms_body")
@@ -28,6 +30,10 @@ public class SendEmailPage {
 	WebElement sendMailButton;
 	@FindBy(xpath="(//button[text()='Close'])[2]")
 	WebElement closemailButton;
+	
+	public void getRecepientName() {
+		page.selectDropDownbyValue(selectBox, "7");
+	}
 	
 	public void getSubject() throws IOException {
 		String mailSubject = ExcelUtility.getString(1, 22,System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");

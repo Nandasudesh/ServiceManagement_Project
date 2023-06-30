@@ -50,7 +50,7 @@ public class HomePageTest extends Base {
 	}
 
 	@Test(groups = "Sanity")
-	public void sendSMS() throws IOException, InterruptedException {
+	public void verifyNavigationToSendSMS() throws IOException, InterruptedException {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
@@ -58,11 +58,15 @@ public class HomePageTest extends Base {
 		loginpage.setPassword(ExcelUtility.getString(1, 1,
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
 		loginpage.clickSubmit();
-		homepage.verifyNavigateSendSMSPage();
+		homepage.navigateToSendSMSPage();
+		String actualMessage=homepage.getActualSendSMSMessage();
+		String expectedMessage=ExcelUtility.getString(1, 6,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
+		Assert.assertEquals(actualMessage, expectedMessage, "Failed navigation to Send SMS Page");
 	}
 
 	@Test(groups = "Regression")
-	public void alertTest() throws IOException {
+	public void verifyNavigationToAlertTest() throws IOException {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
@@ -70,7 +74,11 @@ public class HomePageTest extends Base {
 		loginpage.setPassword(ExcelUtility.getString(1, 1,
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
 		loginpage.clickSubmit();
-		homepage.verfiyNavigateToAlertPage();
+		homepage.navigateToAlertPage();
+		String actualMessage=homepage.getAlertPageActualMessage();
+		String expectedMessage=ExcelUtility.getString(1, 19,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
+		Assert.assertEquals(actualMessage, expectedMessage, "Navigation to alert page failed");
 
 	}
 

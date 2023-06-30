@@ -74,30 +74,37 @@ public class HomePage {
 		page.clickOnElement(addReparation);
 	}
 	
-//	public String getReparationPageMessage() throws InterruptedException {
-//		
-//		WaitUtility.waitForElement(driver, labelIMEI);
-//		return page.getElementText(labelIMEI);
-//	}
 	
 	public Boolean isIMEILabelPresent() {
 		WaitUtility.waitForElement(driver, labelIMEI);
 		return labelIMEI.isDisplayed();
 		
 	}
-
-
-
-	public void verifyNavigateSendSMSPage() throws IOException {
+	
+	public void navigateToSendSMSPage() {
 		page.clickOnElement(addIcon);
 		page.clickOnElement(sendSMS);
-		String expectedMessage = ExcelUtility.getString(1, 6,
-				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
-		WaitUtility.waitForElement(driver, sendSMSmsg);
-		String actualMessage = page.getElementText(sendSMSmsg);
-		Assert.assertEquals(actualMessage, expectedMessage, "Failed test");
-
 	}
+	
+	public String getActualSendSMSMessage() {
+		WaitUtility.waitForElement(driver, sendSMSmsg);
+		String message = page.getElementText(sendSMSmsg);
+		return message;
+		
+	}
+	
+	public void navigateToAlertPage() {
+		page.clickOnElement(alertIcon);
+		page.clickOnElement(alertDrop);
+	}
+	
+	public String getAlertPageActualMessage() {
+		WaitUtility.waitForElement(driver, alertMessage);
+		String message = page.getElementText(alertMessage);
+		return message;		
+	}
+	
+	
 
 	public void verfiyNavigateToAlertPage() throws IOException {
 		page.clickOnElement(alertIcon);

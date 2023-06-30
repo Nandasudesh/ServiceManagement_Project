@@ -52,7 +52,7 @@ public class AddClientTest extends Base{
 		loginpage.setPassword(ExcelUtility.getString(1, 1, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
 		loginpage.clickSubmit();
 		homepage=new HomePage(driver);
-		homepage.verifyNavigateClientPage();
+		homepage.navigateToAddClientPage();
 		addclientpage=new AddClientPage(driver);
 		
 		addclientpage.addCity();

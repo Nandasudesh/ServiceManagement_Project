@@ -26,16 +26,21 @@ public class SendSMSPage {
 	WebElement textArea;
 	@FindBy(xpath="//button[@value='Submit']")
 	WebElement sendButton;
+	@FindBy(xpath="(//button[@class='close'])[10]")
+	WebElement close;
 	
-	public void sendSMS() throws IOException {
-		//String username=ExcelUtility.getString(1, 7, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet");
-		page.selectDropDownbyText(dropDown, "Kiran");
-		String textarea=ExcelUtility.getString(1, 8, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet");
-		page.setValue(textArea, textarea);
-		
-		page.clickOnElement(sendButton);
-		
-		
+	public void selectRecepient() {
+		page.selectDropDownbyValue(dropDown, "59");
 	}
+	
+	public void enterMessage(String text) throws IOException {
+		page.setValue(textArea, text);
+	}
+	
+	public void clickOnSendButton() {
+		page.clickOnElement(sendButton);
+		page.clickOnElement(close);
+	}
+
 
 }
