@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qa.utilities.PageUtility;
+import com.qa.utilities.WaitUtility;
 
 public class InventoryPage {
 	public WebDriver driver;
@@ -24,7 +25,7 @@ public class InventoryPage {
 	WebElement searchTextBox;
 	@FindBy(xpath="//tr[@class='product_link']")
 	List <WebElement> rowNo;
-	@FindBy(xpath="//a[@class='tip btn btn-danger bpo']")
+	@FindBy(xpath="(//div[@class='btn-group'])[3]")
 	WebElement delete;
 	@FindBy(xpath="//a[@class='btn btn-danger']")
 	WebElement yesDelete;
@@ -35,7 +36,7 @@ public class InventoryPage {
 	
 	public void clickonInventoryInfo() {
 		page.clickOnElement(inventoryProductInfo);
-	}//65685862
+	}//65685862, 49928179 id-183
 	
 	public void clickonSearch(String code) {
 		page.setValue(searchTextBox, code);
@@ -52,6 +53,15 @@ public class InventoryPage {
 		return page.getElementText(inventoryCount);
 		
 	}
+	//new
+	public int getExpectedInventoryCount() {
+		String count=page.getElementText(inventoryCount);
+		int value=Integer.parseInt(count);
+	int expectedcount=value-1;
+	
+	
+		return expectedcount;
+	}
 	
 	public int getAfterDeleteionCount() {
 		String count=page.getElementText(inventoryCount);
@@ -61,11 +71,14 @@ public class InventoryPage {
 	}
 	
 	public void clickOndelete() {
+		WaitUtility.waitForElement(driver, delete);
 		page.clickOnElement(delete);
+		System.out.println("Delete");
 	}
 	
 	public void selectYes() {
 		page.clickOnElement(yesDelete);
+		System.out.println("confirm delete");
 	}
 	
 	

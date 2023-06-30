@@ -18,7 +18,7 @@ public class HomePageTest extends Base{
 	
 
 	
-	@Test
+	@Test(groups="Sanity")
 	public void addClient() throws IOException {
 		loginpage=new LoginPage(driver);
 		homepage=new HomePage(driver);
@@ -29,7 +29,7 @@ public class HomePageTest extends Base{
 		
 	}
 
-	@Test
+	@Test(groups="Regression")
 	public void verifyNavigateToReparartionPage() throws IOException, InterruptedException {
 		loginpage=new LoginPage(driver);
 		homepage=new HomePage(driver);
@@ -48,7 +48,7 @@ public class HomePageTest extends Base{
 	
 	
 	
-	@Test
+	@Test(groups="Sanity")
 	public void sendSMS() throws IOException, InterruptedException {
 		loginpage=new LoginPage(driver);
 		homepage=new HomePage(driver);
@@ -57,7 +57,7 @@ public class HomePageTest extends Base{
 		loginpage.clickSubmit();
 		homepage.verifyNavigateSendSMSPage();
 	}
-	@Test
+	@Test(groups="Regression")
 	public void alertTest() throws IOException {
 		loginpage=new LoginPage(driver);
 		homepage=new HomePage(driver);

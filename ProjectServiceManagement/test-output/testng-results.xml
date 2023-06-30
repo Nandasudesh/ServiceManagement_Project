@@ -1,629 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="0" failed="0" skipped="7">
+<testng-results skipped="0" failed="0" ignored="3" total="7" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-26T14:26:37Z" name="Default suite" finished-at="2023-06-26T14:26:37Z" duration-ms="70">
+  <suite name="MyTestSuite" duration-ms="37029" started-at="2023-06-30T11:02:04Z" finished-at="2023-06-30T11:02:41Z">
     <groups>
+      <group name="Sanity">
+        <method signature="HomePageTest.addClient()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="addClient" class="com.qa.testscripts.HomePageTest"/>
+        <method signature="HomePageTest.sendSMS()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="sendSMS" class="com.qa.testscripts.HomePageTest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="HomePageTest.alertTest()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="alertTest" class="com.qa.testscripts.HomePageTest"/>
+        <method signature="HomePageTest.verifyNavigateToReparartionPage()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="verifyNavigateToReparartionPage" class="com.qa.testscripts.HomePageTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2023-06-26T14:26:37Z" name="Default test" finished-at="2023-06-26T14:26:37Z" duration-ms="70">
+    <test name="MyTest" duration-ms="37029" started-at="2023-06-30T11:02:04Z" finished-at="2023-06-30T11:02:41Z">
       <class name="com.qa.testscripts.HomePageTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="initializeBrowser" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="initializeBrowser" is-config="true" duration-ms="6276" started-at="2023-06-30T11:02:04Z" finished-at="2023-06-30T11:02:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="addClient()[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="addClient" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="addClient()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="addClient" duration-ms="4374" started-at="2023-06-30T11:02:11Z" finished-at="2023-06-30T11:02:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addClient -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="browserQuit" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="initializeBrowser" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="initializeBrowser" is-config="true" duration-ms="4135" started-at="2023-06-30T11:02:15Z" finished-at="2023-06-30T11:02:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="alertTest()[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="alertTest" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="alertTest()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="alertTest" duration-ms="3206" started-at="2023-06-30T11:02:19Z" finished-at="2023-06-30T11:02:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- alertTest -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="browserQuit" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="initializeBrowser" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="initializeBrowser" is-config="true" duration-ms="6653" started-at="2023-06-30T11:02:22Z" finished-at="2023-06-30T11:02:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="sendSMS()[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="sendSMS" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="sendSMS()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="sendSMS" duration-ms="3491" started-at="2023-06-30T11:02:29Z" finished-at="2023-06-30T11:02:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendSMS -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="browserQuit" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="initializeBrowser" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="initializeBrowser" is-config="true" duration-ms="4002" started-at="2023-06-30T11:02:32Z" finished-at="2023-06-30T11:02:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyNavigateToReparartionPage()[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="verifyNavigateToReparartionPage" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="verifyNavigateToReparartionPage()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="verifyNavigateToReparartionPage" duration-ms="4841" started-at="2023-06-30T11:02:36Z" finished-at="2023-06-30T11:02:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNavigateToReparartionPage -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="browserQuit" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="initializeBrowser" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyNavigateToSendMail()[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="verifyNavigateToSendMail" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyNavigateToSendMail -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="browserQuit" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="initializeBrowser" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyOrderandReparartionsPage()[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="verifyOrderandReparartionsPage" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyOrderandReparartionsPage -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="browserQuit" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="initializeBrowser" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyPresenceOfQuickSMSFunction()[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="verifyPresenceOfQuickSMSFunction" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
-in C:\Users\nanda\AppData\Local\Temp\testng-eclipse-101232470\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPresenceOfQuickSMSFunction -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.HomePageTest@106cc338]" started-at="2023-06-26T14:26:37Z" name="browserQuit" finished-at="2023-06-26T14:26:37Z" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
       </class> <!-- com.qa.testscripts.HomePageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- MyTest -->
+  </suite> <!-- MyTestSuite -->
 </testng-results>

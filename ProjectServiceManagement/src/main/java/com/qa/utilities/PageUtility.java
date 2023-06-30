@@ -1,5 +1,10 @@
 package com.qa.utilities;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -16,18 +21,17 @@ public class PageUtility {
 
 	public static String getElementText(WebElement element) {
 		return element.getText();
-		
+
 	}
 
 	public void setValue(WebElement element, String value) {
 		element.sendKeys(value);
-		
 
 	}
-	
+
 	public String getURL(WebDriver driver) {
 		return driver.getCurrentUrl();
-		
+
 	}
 
 	public void selectDropDownbyText(WebElement element, String text) {
@@ -79,18 +83,39 @@ public class PageUtility {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.stop();");
 	}
-	
+
 	public String getTitile(WebDriver driver) {
 		return driver.getTitle();
 	}
-	
+
 	public static void selectElementFromListUsingGetAttribute(List<WebElement> element, String attri, String value) {
-		for(WebElement i: element) {
-			String attribute=i.getAttribute(attri);
-			if(attribute.contentEquals(value)) {
+		for (WebElement i : element) {
+			String attribute = i.getAttribute(attri);
+			// String values=String.valueOf(value);
+			if (attribute.contentEquals(value)) {
 				i.click();
 			}
 		}
+	}
+
+	public void fileUpload(WebDriver driver, WebElement element, String location) throws AWTException {
+
+		Robot obj = new Robot();
+		Actions obj1 = new Actions(driver);
+		obj1.moveToElement(element).click().perform();
+		StringSelection ss = new StringSelection(location);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+		obj.delay(500);
+		obj.keyPress(KeyEvent.VK_CONTROL);
+		obj.keyPress(KeyEvent.VK_V);
+		obj.delay(500);
+		obj.keyRelease(KeyEvent.VK_CONTROL);
+		obj.keyRelease(KeyEvent.VK_V);
+		obj.delay(500);
+		obj.keyPress(KeyEvent.VK_ENTER);
+		obj.keyRelease(KeyEvent.VK_ENTER);
+		obj.delay(500);
+
 	}
 
 }

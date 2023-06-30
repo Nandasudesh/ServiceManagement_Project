@@ -17,7 +17,7 @@
 			<!--<class name="com.qa.testscripts.OredrAndReparationPageTest"></class>-->
 			<!--<class name="com.qa.testscripts.QuickSMSTest"></class>-->
 			<!--<class name="com.qa.testscripts.ForgotYourPwTest"></class>-->
-			<class name="com.qa.testscripts.deleteInventoryProductTest"></class>
+			<class name="com.qa.testscripts.InventoryPageTest"></class>
 		</classes>
 	</test> <!--
 	Test -->

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="com.qa.servicemanagementproject.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.testscripts.OredrAndReparationPageTest">
+      <class name="com.qa.testscripts.InventoryPageTest">
         <methods>
           <include name="browserQuit"/>
-          <include name="filterDetails"/>
+          <include name="deleteInventoryProductTest"/>
           <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.qa.testscripts.OredrAndReparationPageTest -->
+      </class> <!-- com.qa.testscripts.InventoryPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
