@@ -22,7 +22,7 @@ public class QuantityAlertTest extends Base{
 		loginpage.setPassword(ExcelUtility.getString(1, 1, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
 		loginpage.clickSubmit();
 		homepage=new HomePage(driver);
-		homepage.navigateToAlertPage();
+		homepage.verfiyNavigateToAlertPage();
 		quantityalertpage=new QuantityAlertPage(driver);
 		quantityalertpage.quantityAlertData();
 	}
