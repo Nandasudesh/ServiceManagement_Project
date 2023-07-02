@@ -1,11 +1,15 @@
 package com.qa.pages;
 
+import java.io.IOException;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
-
+import com.qa.utilities.ExcelUtility;
 import com.qa.utilities.FakerUtility;
 import com.qa.utilities.PageUtility;
 
@@ -58,7 +62,8 @@ public class AddClientPage {
 	WebElement saveChangesButton;
 	@FindBy(xpath="//div[@id='dynamic-table_filter']//label//input")
 	WebElement searchClient;
-	
+	@FindBy(xpath="(//a[text()='More Info '])[2]")
+	WebElement clientMoreInfo;
 	@FindBy(xpath="//li[text()='This value is required.']")
 	WebElement alertMsgWithoutClient;
 	
@@ -137,20 +142,23 @@ public class AddClientPage {
 	}
 	
 	
-//	public void verifyIfClientAdded() {
-//		page.clickOnElement(searchClient);
-//		page.setValue(searchClient, email);
-//		boolean isClientAdded=driver.findElements(By.xpath("//table//tbody//tr//td[contains(text().'"+name+"')]")).size()>0;
-//		Assert.assertTrue(isClientAdded, "client addittion failed");
-//	}
+
 	
 	public String getAlertMsg() {
 		return page.getElementText(alertMsgWithoutClient);
 	}
 	
 	
-
-//	public void addClientData() throws IOException {
+	
+//	public void verifyIfClientAdded() {
+//	page.clickOnElement(searchClient);
+//	page.setValue(searchClient, email);
+//	boolean isClientAdded=driver.findElements(By.xpath("//table//tbody//tr//td[contains(text().'"+name+"')]")).size()>0;
+//	Assert.assertTrue(isClientAdded, "client addittion failed");
+//}
+//
+//	public void addClientData() throws IOException{
+//		
 //		String clientname = ExcelUtility.getString(1, 8, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
 //		String companyname = ExcelUtility.getString(1, 9, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
 //		String locate = ExcelUtility.getString(1, 10, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
@@ -176,6 +184,14 @@ public class AddClientPage {
 //		page.setValue(comment, cmnt);
 //		page.setValue(uploadFile, "\\src\\main\\java\\Resources\\branches-1842554_960_720-1.jpg");
 //		page.clickOnElement(addClientButton);
+//		
+//	}
+//	
+//	public void searchForAddedClient(String clientName) {
+//		page.clickOnElement(clientMoreInfo);
+//		page.setValue(searchClient, clientName);
+//		boolean isClientAdded=driver.findElements(By.xpath("//table//tbody//tr//td[contains(text().'"+clientName+"')]")).size()>0;
+//		Assert.assertTrue(isClientAdded);
 //	}
 	
 	

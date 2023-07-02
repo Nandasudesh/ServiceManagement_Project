@@ -8,7 +8,7 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<!--<class name="com.qa.testscripts.SendSMSTest"></class>-->
-			<!--<class name="com.qa.testscripts.AddClientTest"></class>-->
+			<class name="com.qa.testscripts.AddClientTest"></class>
 			<!--<class name="com.qa.testscripts.HomePageTest"></class>-->
 			<!--<class name="com.qa.testscripts.LoginTest" />-->
 			<!--<class name="com.qa.testscripts.QuantityAlertTest"></class>-->
@@ -18,7 +18,7 @@
 			<!--<class name="com.qa.testscripts.QuickSMSTest"></class>-->
 			<!--<class name="com.qa.testscripts.ForgotYourPwTest"></class>-->
 			<!--<class name="com.qa.testscripts.InventoryPageTest"></class>-->
-			<class name="com.qa.testscripts.ReparationTest"></class>
+			<!--<class name="com.qa.testscripts.ReparationTest"></class>-->
 		</classes>
 	</test> <!--
 	Test -->
