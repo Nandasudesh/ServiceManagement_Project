@@ -15,6 +15,8 @@ public class ReparationTest extends Base {
 	LoginPage loginpage;
 	HomePage homepage;
 	ReparationPage rPage;
+	
+	
 	@Test
 	public void addReparation() throws IOException, AWTException, InterruptedException {
 		loginpage=new LoginPage(driver);
@@ -26,6 +28,25 @@ public class ReparationTest extends Base {
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
 		loginpage.clickSubmit();
 		homepage.navigateToReparartionPage();
+		rPage.addClient(ExcelUtility.getString(4, 3,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		rPage.addIMEI(ExcelUtility.getString(4, 2,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		rPage.addTax(ExcelUtility.getString(4, 4,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		rPage.setAssignedTo(ExcelUtility.getString(4, 5,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		rPage.addCategory(ExcelUtility.getString(4, 6,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		rPage.setDefect(ExcelUtility.getString(4, 7,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		rPage.setManufacturer(ExcelUtility.getString(4, 8,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		rPage.setModel(ExcelUtility.getString(4, 9,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		rPage.setServiceCharge(ExcelUtility.getNumeric(4, 10,
+				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		
 		rPage.uploadImage();
 		
 		

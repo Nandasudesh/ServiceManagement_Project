@@ -1,81 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="7" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="MyTestSuite" duration-ms="37029" started-at="2023-06-30T11:02:04Z" finished-at="2023-06-30T11:02:41Z">
+  <suite name="Suite" duration-ms="13143" started-at="2023-07-01T05:47:46Z" finished-at="2023-07-01T05:47:59Z">
     <groups>
-      <group name="Sanity">
-        <method signature="HomePageTest.addClient()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="addClient" class="com.qa.testscripts.HomePageTest"/>
-        <method signature="HomePageTest.sendSMS()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="sendSMS" class="com.qa.testscripts.HomePageTest"/>
-      </group> <!-- Sanity -->
-      <group name="Regression">
-        <method signature="HomePageTest.alertTest()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="alertTest" class="com.qa.testscripts.HomePageTest"/>
-        <method signature="HomePageTest.verifyNavigateToReparartionPage()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="verifyNavigateToReparartionPage" class="com.qa.testscripts.HomePageTest"/>
-      </group> <!-- Regression -->
     </groups>
-    <test name="MyTest" duration-ms="37029" started-at="2023-06-30T11:02:04Z" finished-at="2023-06-30T11:02:41Z">
-      <class name="com.qa.testscripts.HomePageTest">
-        <test-method status="PASS" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="initializeBrowser" is-config="true" duration-ms="6276" started-at="2023-06-30T11:02:04Z" finished-at="2023-06-30T11:02:11Z">
+    <test name="Test" duration-ms="13143" started-at="2023-07-01T05:47:46Z" finished-at="2023-07-01T05:47:59Z">
+      <class name="com.qa.testscripts.ReparationTest">
+        <test-method status="PASS" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.ReparationTest@62e7f11d]" name="initializeBrowser" is-config="true" duration-ms="5657" started-at="2023-07-01T05:47:46Z" finished-at="2023-07-01T05:47:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method status="PASS" signature="addClient()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="addClient" duration-ms="4374" started-at="2023-06-30T11:02:11Z" finished-at="2023-06-30T11:02:15Z">
+        <test-method status="PASS" signature="addReparation()[pri:0, instance:com.qa.testscripts.ReparationTest@62e7f11d]" name="addReparation" duration-ms="6630" started-at="2023-07-01T05:47:51Z" finished-at="2023-07-01T05:47:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addClient -->
-        <test-method status="PASS" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="initializeBrowser" is-config="true" duration-ms="4135" started-at="2023-06-30T11:02:15Z" finished-at="2023-06-30T11:02:19Z">
+        </test-method> <!-- addReparation -->
+        <test-method status="PASS" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.ReparationTest@62e7f11d]" name="browserQuit" is-config="true" duration-ms="813" started-at="2023-07-01T05:47:58Z" finished-at="2023-07-01T05:47:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[[TestResult name=addReparation status=SUCCESS method=ReparationTest.addReparation()[pri:0, instance:com.qa.testscripts.ReparationTest@62e7f11d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method status="PASS" signature="alertTest()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="alertTest" duration-ms="3206" started-at="2023-06-30T11:02:19Z" finished-at="2023-06-30T11:02:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- alertTest -->
-        <test-method status="PASS" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="initializeBrowser" is-config="true" duration-ms="6653" started-at="2023-06-30T11:02:22Z" finished-at="2023-06-30T11:02:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method status="PASS" signature="sendSMS()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="sendSMS" duration-ms="3491" started-at="2023-06-30T11:02:29Z" finished-at="2023-06-30T11:02:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sendSMS -->
-        <test-method status="PASS" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="initializeBrowser" is-config="true" duration-ms="4002" started-at="2023-06-30T11:02:32Z" finished-at="2023-06-30T11:02:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method status="PASS" signature="verifyNavigateToReparartionPage()[pri:0, instance:com.qa.testscripts.HomePageTest@51f116b8]" name="verifyNavigateToReparartionPage" duration-ms="4841" started-at="2023-06-30T11:02:36Z" finished-at="2023-06-30T11:02:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyNavigateToReparartionPage -->
-      </class> <!-- com.qa.testscripts.HomePageTest -->
-    </test> <!-- MyTest -->
-  </suite> <!-- MyTestSuite -->
+        </test-method> <!-- browserQuit -->
+      </class> <!-- com.qa.testscripts.ReparationTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

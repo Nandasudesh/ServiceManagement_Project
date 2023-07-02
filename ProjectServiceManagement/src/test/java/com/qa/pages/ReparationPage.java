@@ -2,6 +2,7 @@ package com.qa.pages;
 
 import java.awt.AWTException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,18 +28,26 @@ public class ReparationPage {
 	WebElement clientDropDown;
 	@FindBy(xpath="//input[@class='select2-search__field']")
 	WebElement clienttextBox;
+	@FindBy(xpath="//li[@id='select2-client_name-result-sg7v-4']")
+	WebElement clientName;//kiran1
 	@FindBy(id="category")
 	WebElement category;
 	@FindBy(xpath="(//span[@class='select2-selection select2-selection--single'])[6]")
 	WebElement taxDropDown;
 	@FindBy(xpath="//input[@class='select2-search__field']")
 	WebElement taxTextBox;
+	@FindBy(xpath="//li[@id='select2-potax2-result-t7qu-2']")
+	WebElement vAT;//VAT
 	@FindBy(xpath="(//span[@class='select2-selection__placeholder'])[2]")
 	WebElement assignToDropDown;
 	@FindBy(xpath="(//input[@class='select2-search__field'])[2]")
 	WebElement assignToTextBox;
+	@FindBy(xpath="//li[@id='select2-assigned_to-result-4nj2-1']")
+	WebElement assignToJoeJacob;//Joe Jacob
 	@FindBy(id="reparation_manufacturer")
 	WebElement manufacturer;
+	@FindBy(xpath="//input[@name='service_charges']")
+	WebElement serviceChargeTextbox;
 	@FindBy(id="reparation_model")
 	WebElement model;
 	@FindBy(id="add_item")
@@ -88,6 +97,57 @@ public class ReparationPage {
 	@FindBy(xpath="//button[@id='repair_submit']")
 	WebElement addReparation;
 	
+	public void addIMEI(String text) {
+		page.setValue(imei, text);
+	}
+	
+	public void addClient(String client) {
+		page.clickOnElement(clientDropDown);
+		page.setValue(clienttextBox, client);
+		page.clickOnElement(clientName);
+	}
+	
+	public void addCategory(String cat) {
+		page.setValue(category, cat);
+	}
+	
+	public void addTax(String tax) {
+		page.clickOnElement(taxDropDown);
+		page.setValue(taxTextBox, tax);
+		page.clickOnElement(vAT);//VAT
+
+	}
+	
+	public void setServiceCharge(String charge) {
+		page.setValue(serviceChargeTextbox, charge);
+	}
+	
+	//assigned to
+	//manuacturer
+	//model
+	//defect
+	
+	public void setAssignedTo(String asignee) {
+		page.clickOnElement(assignToDropDown);
+		page.clickOnElement(assignToTextBox);
+		page.clickOnElement(assignToJoeJacob);
+	}
+	
+	public void setManufacturer(String manfct) {
+		page.setValue(manufacturer, manfct);
+	}
+	
+	public void setModel(String modell) {
+		page.setValue(model, modell);
+		
+	}
+	
+	public void setDefect(String defectt) {
+		page.setValue(defect, defectt);
+	}
+	
+	
+	
 	
 	public void uploadImage() throws AWTException, InterruptedException {
 		WaitUtility.waitForElement(driver, uploadButton);
@@ -97,7 +157,10 @@ public class ReparationPage {
 		//WaitUtility.waitForElement(driver, uploadFinal);
 		page.clickOnElement(uploadFinal);
 		String message=page.getElementText(uploadCompleteMessage);
+		WaitUtility.waitForElementLocated(driver, By.xpath("//div[@class='progress-bar bg-success progress-bar-success']"));
+		//WaitUtility.waitForTextToBePresent(driver, By.xpath("//div[@class='progress-bar bg-success progress-bar-success']"), message);		
 		System.out.println(message);
+		page.clickOnElement(closeUpload);
 	
 	}
 

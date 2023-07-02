@@ -11,7 +11,7 @@ import com.aventstack.extentreports.Status;
 import com.qa.utilities.ExtentReportUtility;
 
 public class Listeners extends Base implements ITestListener {
-	ExtentTest test;
+	ExtentTest test;//Extent Test is a class
 
 	ExtentReports extent = ExtentReportUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();//objects of thread local class. Each thread will have its own object.. provides thread safety
