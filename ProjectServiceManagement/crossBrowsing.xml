@@ -1,33 +1,17 @@
 <suite name="MyTestSuite">
-
 	<listeners>
-
-		<listener class-name="utilities.ExtentReportUtils" />
-
+		<listener class-name="com.qa.servicemanagementproject.Listeners" />
 	</listeners>
-
 	<test name="ChromeTest">
-
 		<parameter name="browser" value="Chrome"></parameter>
-
 		<classes>
-
-			<class name="testCases.DashboardPageTestCases"></class>
-
+			<class name="com.qa.testscripts.AddClientTest"></class>
 		</classes>
-
 	</test>
-
 	<test name="EdgeTest">
-
 		<parameter name="browser" value="Edge"></parameter>
-
 		<classes>
-
-			<class name="testCases.DashboardPageTestCases"></class>
-
+			<class name="com.qa.testscripts.QuickSMSTest"></class>
 		</classes>
-
 	</test>
-
 </suite>

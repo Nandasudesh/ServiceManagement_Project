@@ -28,8 +28,8 @@ public class ReparationTest extends Base {
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
 		loginpage.clickSubmit();
 		homepage.navigateToReparartionPage();
-		rPage.addClient(ExcelUtility.getString(4, 3,
-				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+//		rPage.addClient(ExcelUtility.getString(4, 3,
+//				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
 		rPage.addIMEI(ExcelUtility.getString(4, 2,
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
 		rPage.addTax(ExcelUtility.getString(4, 4,

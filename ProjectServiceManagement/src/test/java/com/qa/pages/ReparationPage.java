@@ -24,7 +24,7 @@ public class ReparationPage {
 	
 	@FindBy(id="imei")
 	WebElement imei;
-	@FindBy(id="select2-client_name-container")
+	@FindBy(xpath="//select[@id='client_name']")
 	WebElement clientDropDown;
 	@FindBy(xpath="//input[@class='select2-search__field']")
 	WebElement clienttextBox;
