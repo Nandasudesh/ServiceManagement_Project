@@ -27,7 +27,6 @@ public class InventoryPageTest extends Base {
 		loginpage.setPassword(ExcelUtility.getString(1, 1,
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
 		loginpage.clickSubmit();
-		// new
 		int expectedCountAfterDelete = iPage.getExpectedInventoryCount();
 
 		iPage.clickonInventoryInfo();
@@ -42,8 +41,6 @@ public class InventoryPageTest extends Base {
 		iPage.selectYes();
 		String countAfterDeletion = iPage.getInventoryCount();
 
-//		int count = iPage.getAfterDeleteionCount();
-//		String actualCount = String.valueOf(count);
 		Assert.assertEquals(countAfterDeletion, expectedCountAfterDelete, "Test Failed");
 
 	}

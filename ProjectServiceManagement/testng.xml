@@ -7,8 +7,8 @@
 	<test thread-count="5" name="Test">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<!--<class name="com.qa.testscripts.SendSMSTest"></class>-->
-			<class name="com.qa.testscripts.AddClientTest"></class>
+			<class name="com.qa.testscripts.SendSMSTest"></class>
+			<!--<class name="com.qa.testscripts.AddClientTest"></class>-->
 			<!--<class name="com.qa.testscripts.HomePageTest"></class>-->
 			<!--<class name="com.qa.testscripts.LoginTest" />-->
 			<!--<class name="com.qa.testscripts.QuantityAlertTest"></class>-->

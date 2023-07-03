@@ -27,6 +27,9 @@ public class SendSMSTest extends Base{
 		sendsmspage.enterMessage(ExcelUtility.getString(1, 8, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
 		sendsmspage.selectRecepient();
 		sendsmspage.clickOnSendButton();
+		String actualMessage=sendsmspage.getAlertMessage();
+		System.out.println(actualMessage);
+		
 
 	}
 	

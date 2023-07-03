@@ -16,7 +16,7 @@ public class OredrAndReparationPageTest extends Base {
 	OredrAndReparationPage orpage;
 
 	@Test
-	public void filterDetails() throws IOException {
+	public void filterDetailsOfReparationPageTest() throws IOException {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		orpage = new OredrAndReparationPage(driver);

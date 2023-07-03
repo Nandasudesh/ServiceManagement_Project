@@ -16,7 +16,7 @@ public class QuantityAlertTest extends Base{
 	HomePage homepage;
 	QuantityAlertPage quantityalertpage;
 	@Test
-	public void quantityAlert() throws IOException {
+	public void quantityAlertPageCountTest() throws IOException {
 		loginpage=new LoginPage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
 		loginpage.setPassword(ExcelUtility.getString(1, 1, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));

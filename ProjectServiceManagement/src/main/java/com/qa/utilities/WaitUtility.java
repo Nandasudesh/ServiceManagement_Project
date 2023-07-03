@@ -20,6 +20,11 @@ public class WaitUtility {
 		driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT,TimeUnit.SECONDS);
 		
 	}
+	
+	public static void waitForAlert(WebDriver driver) {
+		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+	        wait.until(ExpectedConditions.alertIsPresent());
+	}
 	//visibility of element
 	public static void waitForElement(WebDriver driver, WebElement element) {
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));

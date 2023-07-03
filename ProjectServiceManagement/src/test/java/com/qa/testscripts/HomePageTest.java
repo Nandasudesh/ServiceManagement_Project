@@ -17,7 +17,7 @@ public class HomePageTest extends Base {
 	LoginPage loginpage;
 
 	@Test(groups = "Sanity")
-	public void verifyAddClientNavigation() throws IOException {
+	public void verifyNavigationToAddClient() throws IOException {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
@@ -66,7 +66,7 @@ public class HomePageTest extends Base {
 	}
 
 	@Test(groups = "Regression")
-	public void verifyNavigationToAlertTest() throws IOException {
+	public void verifyNavigationToAlertPageTest() throws IOException {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
@@ -83,7 +83,7 @@ public class HomePageTest extends Base {
 	}
 
 	@Test
-	public void verifyNavigateToSendMail() throws IOException {
+	public void verifyNavigateToSendMailPageTest() throws IOException {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
@@ -100,7 +100,7 @@ public class HomePageTest extends Base {
 	}
 
 	@Test
-	public void verifyOrderandReparartionsPage() throws IOException {
+	public void verifyOrderandReparartionsPageTest() throws IOException {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
@@ -116,7 +116,7 @@ public class HomePageTest extends Base {
 	}
 
 	@Test
-	public void verifyPresenceOfQuickSMSFunction() throws IOException {
+	public void verifyPresenceOfQuickSMSFunctionTest() throws IOException {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,

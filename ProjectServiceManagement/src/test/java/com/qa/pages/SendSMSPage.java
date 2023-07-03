@@ -2,6 +2,7 @@ package com.qa.pages;
 
 import java.io.IOException;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.qa.utilities.ExcelUtility;
 import com.qa.utilities.PageUtility;
+import com.qa.utilities.WaitUtility;
 
 public class SendSMSPage {
 	
@@ -40,6 +42,12 @@ public class SendSMSPage {
 	public void clickOnSendButton() {
 		page.clickOnElement(sendButton);
 		page.clickOnElement(close);
+	}
+	
+	public String getAlertMessage() {
+		WaitUtility.waitForAlert(driver);
+		Alert alert=driver.switchTo().alert();
+		return alert.getText();
 	}
 
 
