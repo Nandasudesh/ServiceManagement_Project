@@ -12,6 +12,7 @@ import org.testng.Assert;
 import com.qa.utilities.ExcelUtility;
 import com.qa.utilities.FakerUtility;
 import com.qa.utilities.PageUtility;
+import com.qa.utilities.WaitUtility;
 
 public class AddClientPage {
 
@@ -66,12 +67,13 @@ public class AddClientPage {
 	WebElement clientMoreInfo;
 	@FindBy(xpath="//li[text()='This value is required.']")
 	WebElement alertMsgWithoutClient;
+	@FindBy(xpath="//div[@id='titoloclienti']")
+	WebElement clientIDAdded;
 	
 
 	public void addClientName() {
 		String name=FakerUtility.clientName();
 		page.setValue(cname, name);
-		System.out.println(name);
 		
 		
 	}
@@ -118,9 +120,6 @@ public class AddClientPage {
 
 	}
 	
-//	public String addVatNo() {
-//		return FakerUtility.ssN();
-//	}
 	
 	public void addSSNo() {
 		String ssno=FakerUtility.ssN();
@@ -150,49 +149,45 @@ public class AddClientPage {
 	
 	
 	
-//	public void verifyIfClientAdded() {
-//	page.clickOnElement(searchClient);
-//	page.setValue(searchClient, email);
-//	boolean isClientAdded=driver.findElements(By.xpath("//table//tbody//tr//td[contains(text().'"+name+"')]")).size()>0;
-//	Assert.assertTrue(isClientAdded, "client addittion failed");
-//}
-//
-//	public void addClientData() throws IOException{
-//		
-//		String clientname = ExcelUtility.getString(1, 8, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
-//		String companyname = ExcelUtility.getString(1, 9, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
-//		String locate = ExcelUtility.getString(1, 10, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
-//		String addresss = ExcelUtility.getString(1, 11, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
-//		String City = ExcelUtility.getString(1, 12, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
-//		String pincode = ExcelUtility.getNumeric(1, 13, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
-//		String phone = ExcelUtility.getNumeric(1, 14, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
-//		String Email = ExcelUtility.getString(1, 15, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
-//		String vatNo = ExcelUtility.getString(1, 16, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
-//		String SSNo = ExcelUtility.getString(1, 17, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
-//		String cmnt = ExcelUtility.getString(1, 18, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
-//
-//		page.setValue(cname, clientname);
-//		page.setValue(compname, companyname);
-//		page.setValue(location, locate);
-//		page.setValue(addresS, addresss);
-//		page.setValue(city, City);
-//		page.setValue(pinCode, pincode);
-//		page.setValue(telephone, phone);
-//		page.setValue(email, Email);
-//		page.setValue(vatno, vatNo);
-//		page.setValue(ssnno, SSNo);
-//		page.setValue(comment, cmnt);
-//		page.setValue(uploadFile, "\\src\\main\\java\\Resources\\branches-1842554_960_720-1.jpg");
-//		page.clickOnElement(addClientButton);
-//		
-//	}
-//	
-//	public void searchForAddedClient(String clientName) {
-//		page.clickOnElement(clientMoreInfo);
-//		page.setValue(searchClient, clientName);
-//		boolean isClientAdded=driver.findElements(By.xpath("//table//tbody//tr//td[contains(text().'"+clientName+"')]")).size()>0;
-//		Assert.assertTrue(isClientAdded);
-//	}
+
+	
+	
+
+	public void addClientData() throws IOException{
+		
+		String clientname = ExcelUtility.getString(1, 8, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
+		String companyname = ExcelUtility.getString(1, 9, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
+		String locate = ExcelUtility.getString(1, 10, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
+		String addresss = ExcelUtility.getString(1, 11, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
+		String City = ExcelUtility.getString(1, 12, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
+		String pincode = ExcelUtility.getNumeric(1, 13, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
+		String phone = ExcelUtility.getNumeric(1, 14, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
+		String Email = ExcelUtility.getString(1, 15, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
+		String vatNo = ExcelUtility.getString(1, 16, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
+		String SSNo = ExcelUtility.getString(1, 17, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
+		String cmnt = ExcelUtility.getString(1, 18, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
+
+		page.setValue(cname, clientname);
+		page.setValue(compname, companyname);
+		page.setValue(location, locate);
+		page.setValue(addresS, addresss);
+		page.setValue(city, City);
+		page.setValue(pinCode, pincode);
+		page.setValue(telephone, phone);
+		page.setValue(email, Email);
+		page.setValue(vatno, vatNo);
+		page.setValue(ssnno, SSNo);
+		page.setValue(comment, cmnt);
+		page.setValue(uploadFile, "\\src\\main\\java\\Resources\\branches-1842554_960_720-1.jpg");
+		page.clickOnElement(addClientButton);
+		
+	}
+	
+	public String getClientAddedMessage(){
+		WaitUtility.waitForElement(driver, clientIDAdded);
+		return page.getElementText(clientIDAdded);
+	}
+	
 	
 	
 

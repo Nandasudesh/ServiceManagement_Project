@@ -74,29 +74,20 @@ public class AddClientTest extends Base{
 	}
 	
 	
-//	@Test
-//	public void add2Client() throws IOException {
-//		loginpage=new LoginPage(driver);
-//		loginpage.setUsername(ExcelUtility.getString(1, 0, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
-//		loginpage.setPassword(ExcelUtility.getString(1, 1, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
-//		loginpage.clickSubmit();
-//		homepage=new HomePage(driver);
-//		homepage.navigateToAddClientPage();
-//		addclientpage=new AddClientPage(driver);
-//		addclientpage.addClientData();
-//	}
-//	
-//	@Test
-//	public void verifyWhetherClientAdded() throws IOException {
-//		loginpage=new LoginPage(driver);
-//		loginpage.setUsername(ExcelUtility.getString(1, 0, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
-//		loginpage.setPassword(ExcelUtility.getString(1, 1, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
-//		loginpage.clickSubmit();
-//		homepage=new HomePage(driver);
-//		homepage.navigateToAddClientPage();
-//		addclientpage=new AddClientPage(driver);
-//		addclientpage.searchForAddedClient(ExcelUtility.getString(1, 8, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
-//	
-//	}
+	@Test
+	public void verifyAddClient() throws IOException {
+		loginpage=new LoginPage(driver);
+		loginpage.setUsername(ExcelUtility.getString(1, 0, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
+		loginpage.setPassword(ExcelUtility.getString(1, 1, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
+		loginpage.clickSubmit();
+		homepage=new HomePage(driver);
+		homepage.navigateToAddClientPage();
+		addclientpage=new AddClientPage(driver);
+		addclientpage.addClientData();
+		String actualMessage =addclientpage.getClientAddedMessage();
+		String expectedMessage=ExcelUtility.getString(7, 1, System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE","testSheet");
+		Assert.assertEquals(actualMessage, expectedMessage, "Test Failed");
+	}
+
 
 }
