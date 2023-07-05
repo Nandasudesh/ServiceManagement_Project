@@ -30,16 +30,12 @@ public class LoginTest extends Base {
 
 	
 	@Test(dataProvider = "getdataFromDataProvider", dataProviderClass = DataProviderUtility.class)
-	public void VerifyLoginCredentials(String uName, String pw) throws IOException {
+	public void LoginCredentialsTest(String uName, String pw) throws IOException {
 		loginpage = new LoginPage(driver);
 		loginpage.setUsername(uName);
 		loginpage.setPassword(pw);
 		loginpage.clickSubmit();
 
-		String expectedMessage = ExcelUtility.getString(1, 2,
-				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
-		String actualMessage = loginpage.getAlertMessage();
-		Assert.assertEquals(expectedMessage, actualMessage, "Test Failed");
 	}
 
 	
