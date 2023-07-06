@@ -40,7 +40,6 @@ public class AddClientTest extends Base{
 		addclientpage.addComment(ExcelUtility.getString(1, 29, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet"));
 		addclientpage.addClient();
 		
-		//addclientpage.verifyIfClientAdded();
 		
 		
 	}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Parallel test Suite]" parallel="methods">
+  <test thread-count="3" name="Parallel(failed)" parallel="methods">
+    <classes>
+      <class name="com.qa.testscripts.LoginTest">
+        <methods>
+          <include name="browserQuit"/>
+          <include name="loginCredentialsTest"/>
+          <include name="invalidloginTest"/>
+          <include name="initializeBrowser"/>
+          <include name="verifyLoginWithValidCredentials"/>
+        </methods>
+      </class> <!-- com.qa.testscripts.LoginTest -->
+    </classes>
+  </test> <!-- Parallel(failed) -->
+</suite> <!-- Failed suite [Parallel test Suite] -->

@@ -7,13 +7,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.testscripts.ReparationTest">
+      <class name="com.qa.testscripts.LogoutTest">
         <methods>
           <include name="browserQuit"/>
-          <include name="addReparation"/>
+          <include name="verifylogoutAppTest"/>
           <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.qa.testscripts.ReparationTest -->
+      </class> <!-- com.qa.testscripts.LogoutTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -14,7 +14,7 @@ public class LoginTest extends Base {
 	LoginPage loginpage;
 
 	@Test
-	public void VerifyLoginWithValidCredentials() throws IOException {
+	public void verifyLoginWithValidCredentials() throws IOException {
 		loginpage = new LoginPage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
@@ -30,15 +30,13 @@ public class LoginTest extends Base {
 
 	
 	@Test(dataProvider = "getdataFromDataProvider", dataProviderClass = DataProviderUtility.class)
-	public void LoginCredentialsTest(String uName, String pw) throws IOException {
+	public void loginCredentialsTest(String uName, String pw) throws IOException {
 		loginpage = new LoginPage(driver);
 		loginpage.setUsername(uName);
 		loginpage.setPassword(pw);
 		loginpage.clickSubmit();
 
-	}
-
-	
+	}	
 	
 	@Test
 	public void invalidloginTest() throws IOException {

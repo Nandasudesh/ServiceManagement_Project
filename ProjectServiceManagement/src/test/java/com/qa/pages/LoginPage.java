@@ -10,6 +10,7 @@ import org.testng.Assert;
 
 import com.qa.utilities.ExcelUtility;
 import com.qa.utilities.PageUtility;
+import com.qa.utilities.WaitUtility;
 
 public class LoginPage {
 	public WebDriver driver;
@@ -52,38 +53,13 @@ public class LoginPage {
 	}
 	
 	public String getPageTitle() {
-		return page.getTitile(driver);
+		String title= page.getTitile(driver);
+		System.out.println(title);
+		return title;
 	}
 	
-	
 
-//	public void validLogin() throws IOException {
-//		String username=ExcelUtility.getString(1, 0, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet");
-//		String password=ExcelUtility.getString(1, 1, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet");
-//		String expectedMessage=ExcelUtility.getString(1, 2, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet");
-//		PageUtility.setValue(userName,username);
-//		PageUtility.setValue(passWord, password);
-//		PageUtility.isElementDisplayed(submit);
-//		PageUtility.clickOnElement(submit);
-//		String actualMessage=page.getElementText(alertMessage);
-//
-//		Assert.assertEquals(actualMessage, expectedMessage, "Login Failed");
-//		
-//		
-//	}
-//	
-//	public void invalidLogin() throws IOException {
-//		String username=ExcelUtility.getString(2, 0, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet");
-//		String password=ExcelUtility.getString(2, 1, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet");
-//		PageUtility.setValue(userName,username);
-//		PageUtility.setValue(passWord, password);
-//		PageUtility.isElementDisplayed(submit);
-//		PageUtility.clickOnElement(submit);
-//		String actualTitle=PageUtility.getTitile(driver);
-//		String expectedTitle=ExcelUtility.getString(1, 20, System.getProperty("user.dir")+"constants.Constant.TESTDATAFILE", "testSheet");
-//		Assert.assertEquals(actualTitle, expectedTitle,"Login Failed, Test success");
-//	}
-//	
+
 	
 	
 	

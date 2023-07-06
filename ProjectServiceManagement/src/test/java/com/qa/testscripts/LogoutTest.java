@@ -15,7 +15,7 @@ public class LogoutTest extends Base {
 	LogoutPage logoutpage;
 
 	@Test
-	public void logoutAppTest() throws IOException {
+	public void verifylogoutAppTest() throws IOException {
 		loginpage = new LoginPage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
@@ -24,10 +24,6 @@ public class LogoutTest extends Base {
 		loginpage.clickSubmit();
 
 		logoutpage.logOutApp();
-	}
-
-	@Test
-	public void verifyLogoutTest() throws IOException {
 		String actualMessage = logoutpage.logoutMessage();
 		String expectedMessage = ExcelUtility.getString(1, 3,
 				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet");
