@@ -9,11 +9,12 @@ import com.qa.dataproviderutility.DataProviderUtility;
 import com.qa.pages.LoginPage;
 import com.qa.servicemanagementproject.Base;
 import com.qa.utilities.ExcelUtility;
+import com.qa.utilities.RetryUtils;
 
 public class LoginTest extends Base {
 	LoginPage loginpage;
 
-	@Test
+	@Test(retryAnalyzer=RetryUtils.class)
 	public void verifyLoginWithValidCredentials() throws IOException {
 		loginpage = new LoginPage(driver);
 		loginpage.setUsername(ExcelUtility.getString(1, 0,
@@ -36,15 +37,13 @@ public class LoginTest extends Base {
 		loginpage.setPassword(pw);
 		loginpage.clickSubmit();
 
-	}	
+	}
 	
-	@Test
-	public void invalidloginTest() throws IOException {
+	@Test(dataProvider = "getInvalidLoginData", dataProviderClass = DataProviderUtility.class)
+	public void invalidloginTest(String uName, String pw) throws IOException {
 		loginpage = new LoginPage(driver);
-		loginpage.setUsername(ExcelUtility.getString(2, 0,
-				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
-		loginpage.setPassword(ExcelUtility.getString(2, 1,
-				System.getProperty("user.dir") + "constants.Constant.TESTDATAFILE", "testSheet"));
+		loginpage.setUsername(uName);
+		loginpage.setPassword(pw);
 		loginpage.clickSubmit();
 
 		String actualTitle = loginpage.getPageTitle();

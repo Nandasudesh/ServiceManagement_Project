@@ -1,7 +1,0 @@
-com\qa\utilities\ExtentReportUtility.class
-constants\Constant.class
-com\qa\utilities\FakerUtility.class
-com\qa\utilities\ScreenshotUtility.class
-com\qa\utilities\ExcelUtility.class
-com\qa\utilities\WaitUtility.class
-com\qa\utilities\PageUtility.class
