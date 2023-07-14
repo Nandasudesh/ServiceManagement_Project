@@ -5,17 +5,25 @@ import org.testng.ITestResult;
 
 public class RetryUtils implements IRetryAnalyzer {
 	
-	int intialcount=0;
-	int maxRetryCount=3;
-	
-	@Override
-	public boolean retry(ITestResult result) {
-		if(intialcount<maxRetryCount) {
-			intialcount ++;
-			return true;
-		}
-		return false;
+	  private int count = 0;
+	    private static int maxTry = 3;
+	    @Override
+	    public boolean retry(ITestResult iTestResult) {
+	        if (!iTestResult.isSuccess()) {                      //Check if test not succeed
+	            if (count < maxTry) {                            //Check if maxtry count is reached
+	                count++;                                     //Increase the maxTry count by 1
+	                iTestResult.setStatus(ITestResult.FAILURE);  //Mark test as failed
+	                return true;                                 //Tells TestNG to re-run the test
+	            } else {
+	                iTestResult.setStatus(ITestResult.FAILURE);  //If maxCount reached,test marked as failed
+	            }
+	        } else {
+	            iTestResult.setStatus(ITestResult.SUCCESS);      //If test passes, TestNG marks it as passed
+	        }
+	        return false;
+	    }
 	}
+
 	
 
-}
+
