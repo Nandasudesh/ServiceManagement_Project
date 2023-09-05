@@ -21,7 +21,7 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(name = "dentity")
+	@FindBy(name = "identity")
 	WebElement userName; // WebElement userName=driver.findElement(By.name="userName")
 	@FindBy(name = "password")
 	WebElement passWord;
