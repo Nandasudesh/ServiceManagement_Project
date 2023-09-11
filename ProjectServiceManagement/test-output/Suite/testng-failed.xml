@@ -5,15 +5,17 @@
     <listener class-name="com.qa.servicemanagementproject.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="Edge"/>
     <classes>
-      <class name="com.qa.testscripts.LogoutTest">
+      <class name="com.qa.testscripts.LoginTest">
         <methods>
           <include name="browserQuit"/>
-          <include name="verifylogoutAppTest"/>
+          <include name="loginCredentialsTest"/>
+          <include name="invalidloginTest"/>
           <include name="initializeBrowser"/>
+          <include name="verifyLoginWithValidCredentials"/>
         </methods>
-      </class> <!-- com.qa.testscripts.LogoutTest -->
+      </class> <!-- com.qa.testscripts.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

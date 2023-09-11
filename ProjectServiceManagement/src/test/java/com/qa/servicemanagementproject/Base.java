@@ -81,7 +81,7 @@ public class Base {
 	public void browserQuit(ITestResult iTestResult) throws IOException {
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
 			screenShot1 = new ScreenshotUtility();
-			screenShot1.getScreenshot(driver, iTestResult.getName());
+			//screenShot1.getScreenshot(driver, iTestResult.getName());
 			ScreenshotUtility.getScreenshot(driver, iTestResult.getName());
 		}
 		driver.quit();
