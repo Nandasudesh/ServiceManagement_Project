@@ -5,7 +5,7 @@
     <listener class-name="com.qa.servicemanagementproject.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="Edge"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
       <class name="com.qa.testscripts.LoginTest">
         <methods>

@@ -2,48 +2,31 @@
 <testng-results skipped="5" failed="0" ignored="0" total="5" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="11625" started-at="2023-09-11T11:40:54Z" finished-at="2023-09-11T11:41:05Z">
+  <suite name="Suite" duration-ms="2018" started-at="2023-09-11T11:43:00Z" finished-at="2023-09-11T11:43:02Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="11625" started-at="2023-09-11T11:40:54Z" finished-at="2023-09-11T11:41:05Z">
+    <test name="Test" duration-ms="2018" started-at="2023-09-11T11:43:00Z" finished-at="2023-09-11T11:43:02Z">
       <class name="com.qa.testscripts.LoginTest">
-        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="3838" started-at="2023-09-11T11:40:54Z" finished-at="2023-09-11T11:40:58Z">
+        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="1673" started-at="2023-09-11T11:43:00Z" finished-at="2023-09-11T11:43:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Edge]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,42 +55,33 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method status="SKIP" signature="invalidloginTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="invalidloginTest" duration-ms="0" started-at="2023-09-11T11:40:58Z" data-provider="getInvalidLoginData" finished-at="2023-09-11T11:40:58Z">
+        <test-method status="SKIP" signature="invalidloginTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="invalidloginTest" duration-ms="0" started-at="2023-09-11T11:43:02Z" data-provider="getInvalidLoginData" finished-at="2023-09-11T11:43:02Z">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -136,53 +110,44 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidloginTest -->
-        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:40:58Z" finished-at="2023-09-11T11:40:58Z">
+        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="1951" started-at="2023-09-11T11:40:58Z" finished-at="2023-09-11T11:41:00Z">
+        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="62" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Edge]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -211,42 +176,33 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method status="SKIP" signature="invalidloginTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="invalidloginTest" duration-ms="0" started-at="2023-09-11T11:41:00Z" data-provider="getInvalidLoginData" finished-at="2023-09-11T11:41:00Z">
+        <test-method status="SKIP" signature="invalidloginTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="invalidloginTest" duration-ms="0" started-at="2023-09-11T11:43:02Z" data-provider="getInvalidLoginData" finished-at="2023-09-11T11:43:02Z">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -275,53 +231,44 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidloginTest -->
-        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:41:00Z" finished-at="2023-09-11T11:41:00Z">
+        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="1887" started-at="2023-09-11T11:41:00Z" finished-at="2023-09-11T11:41:02Z">
+        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="70" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Edge]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -350,42 +297,33 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method status="SKIP" signature="invalidloginTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="invalidloginTest" duration-ms="0" started-at="2023-09-11T11:41:02Z" data-provider="getInvalidLoginData" finished-at="2023-09-11T11:41:02Z">
+        <test-method status="SKIP" signature="invalidloginTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="invalidloginTest" duration-ms="0" started-at="2023-09-11T11:43:02Z" data-provider="getInvalidLoginData" finished-at="2023-09-11T11:43:02Z">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -414,53 +352,44 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidloginTest -->
-        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:41:02Z" finished-at="2023-09-11T11:41:02Z">
+        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="1908" started-at="2023-09-11T11:41:02Z" finished-at="2023-09-11T11:41:03Z">
+        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="71" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Edge]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -489,42 +418,33 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method status="SKIP" signature="loginCredentialsTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="loginCredentialsTest" duration-ms="0" started-at="2023-09-11T11:41:04Z" data-provider="getdataFromDataProvider" finished-at="2023-09-11T11:41:04Z">
+        <test-method status="SKIP" signature="loginCredentialsTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="loginCredentialsTest" duration-ms="0" started-at="2023-09-11T11:43:02Z" data-provider="getdataFromDataProvider" finished-at="2023-09-11T11:43:02Z">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -553,53 +473,44 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginCredentialsTest -->
-        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:41:04Z" finished-at="2023-09-11T11:41:04Z">
+        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="1943" started-at="2023-09-11T11:41:04Z" finished-at="2023-09-11T11:41:05Z">
+        <test-method status="FAIL" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="initializeBrowser" is-config="true" duration-ms="71" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Edge]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -628,42 +539,33 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method status="SKIP" signature="verifyLoginWithValidCredentials()[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="verifyLoginWithValidCredentials" duration-ms="0" started-at="2023-09-11T11:41:05Z" finished-at="2023-09-11T11:41:05Z">
+        <test-method status="SKIP" signature="verifyLoginWithValidCredentials()[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="verifyLoginWithValidCredentials" duration-ms="0" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of Microsoft Edge WebDriver only supports Microsoft Edge version 114
-Current browser version is 116.0.1938.62 with binary path C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*, --remote-allow-origins=*], extensions: []}}}]
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
 at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
 at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:71)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:110)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.qa.servicemanagementproject.Base.initializeBrowser(Base.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -692,13 +594,21 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-2LR20BM8', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:226)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithValidCredentials -->
-        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:41:05Z" finished-at="2023-09-11T11:41:05Z">
+        <test-method status="SKIP" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.LoginTest@4da4253]" name="browserQuit" is-config="true" duration-ms="0" started-at="2023-09-11T11:43:02Z" finished-at="2023-09-11T11:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
